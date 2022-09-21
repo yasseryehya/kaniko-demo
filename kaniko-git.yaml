@@ -9,8 +9,9 @@ spec:
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug
     args: ["--context=git://github.com/yasseryehya/kaniko-demo",
-            "--destination=yassoyaya/devops-toolkit:1.0.1"]
-    command: ["sleep", "3600"]
+            "--destination=yassoyaya/devops-toolkit:1.0.1",
+            "sleep",
+            "3600"]
     volumeMounts:
       - name: kaniko-secret
         mountPath: /kaniko/.docker
